@@ -33,7 +33,7 @@
             this.dvgAlunos = new System.Windows.Forms.DataGridView();
             this.btnIncluir = new System.Windows.Forms.Button();
             this.btnRemover = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAlteracao = new System.Windows.Forms.TextBox();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnTodos = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
@@ -66,6 +66,7 @@
             this.dvgAlunos.Name = "dvgAlunos";
             this.dvgAlunos.Size = new System.Drawing.Size(513, 355);
             this.dvgAlunos.TabIndex = 2;
+            this.dvgAlunos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgAlunos_CellContentClick);
             // 
             // btnIncluir
             // 
@@ -85,13 +86,15 @@
             this.btnRemover.TabIndex = 4;
             this.btnRemover.Text = "Remover";
             this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
             // 
-            // textBox1
+            // txtAlteracao
             // 
-            this.textBox1.Location = new System.Drawing.Point(283, 731);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(426, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtAlteracao.Location = new System.Drawing.Point(283, 731);
+            this.txtAlteracao.Name = "txtAlteracao";
+            this.txtAlteracao.Size = new System.Drawing.Size(426, 20);
+            this.txtAlteracao.TabIndex = 5;
+            this.txtAlteracao.TextChanged += new System.EventHandler(this.txtAlteracao_TextChanged);
             // 
             // btnAlterar
             // 
@@ -101,6 +104,7 @@
             this.btnAlterar.TabIndex = 6;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnTodos
             // 
@@ -178,7 +182,7 @@
             this.Controls.Add(this.btnFechar);
             this.Controls.Add(this.btnTodos);
             this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAlteracao);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnIncluir);
             this.Controls.Add(this.dvgAlunos);
@@ -199,7 +203,7 @@
         private System.Windows.Forms.DataGridView dvgAlunos;
         private System.Windows.Forms.Button btnIncluir;
         private System.Windows.Forms.Button btnRemover;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAlteracao;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnTodos;
         private System.Windows.Forms.Button btnFechar;
